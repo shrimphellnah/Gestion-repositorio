@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bandera</title>
+<script type="text/javascript">
+window.onload = function() {
+  var lienzo = document.getElementById("Bandera");
+  var contexto = lienzo.getContext('2d');
+  var image = document.createElement("img");
+  var imageUrl = "aguila.png";
+  image.onload = function()
+  {
+	contexto.drawImage(image, 95, 37, 100, 100);
+  };
+  
+  image.src = imageUrl;
+  
+contexto.fillStyle = "rgba(255, 0, 0, 1)";
+contexto.fillRect(0, 0, 600, 200);
+contexto.fillStyle = "rgba(0, 255, 0, 1)";
+contexto.fillRect(0, 0, 95, 200);
+contexto.fillStyle = "rgba(255, 255, 255, 1)";
+contexto.fillRect(95, 0, 100, 200);
+contexto.img
+}
+</script>
+</head>
+<body>
+<h1>Bandera Ejemplo</h1>
+<canvas id="Bandera" width="300" height="300"></canvas>
+</body>
+</html>

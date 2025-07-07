@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>OPERACIONES ARITMETICAS dos Numeros JavaScript</title>
+    </head>
+    <body>
+    <fieldset>
+        <legend>Ingrese dos numeros</legend>
+        <label for="">Numero 1:</label>
+        <input type="text" id="txtN1">
+        <br><br>
+        <label for="">Numero 2:</label>
+        <input type="text" id="txtN2">
+        <br>
+        <br>
+        <br>
+        <p id="Resultado">El resultado es: </p>
+        <br>
+        <input type="button" onClick="Sumar();" value="Sumar">
+        <input type="button" onClick="Restar();" value="restar">
+        <input type="button" onClick="Multi();" value="Multiplicar">
+        <input type="button" onClick="dividir();" value="Dividir">
+    </fieldset>
+    </body>
+     <script>
+        function Sumar()
+         {
+            var n1 = document.getElementById('txtN1').value;
+            var n2 = document.getElementById('txtN2').value;
+            var suma = parseInt(n1) + parseInt(n2);
+           document.getElementById('Resultado').innerText = "El resultado es: "+suma;
+        }
+		
+		function Restar()
+		{
+			var n1 = document.getElementById('txtN1').value;
+			var n2 = document.getElementById('txtN2').value;
+			var resta = parseInt(n1) - parseInt(n2);
+			document.getElementById('Resultado').innerText = "El resultado es: "+resta;
+		}
+		
+    function Multi()
+         {
+            var n1 = document.getElementById('txtN1').value;
+            var n2 = document.getElementById('txtN2').value;
+            var producto = parseInt(n1) * parseInt(n2);
+            document.getElementById('Resultado').innerText = "El resultado es: "+producto;
+        }
+	
+	function dividir()
+	{
+		var n1 = document.getElementById('txtN1').value;
+		var n2 = document.getElementById('txtN2').value;
+		var division = parseInt(n1) / parseInt(n2);
+		document.getElementById('Resultado').innerText = "El resultado es: "+division;
+	}
+    </script>
+  
+</html>

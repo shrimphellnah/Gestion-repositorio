@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Convertidor de distancia</title>
+    <script>
+        function convertir() {
+            var centimetros = parseFloat(document.getElementById("centimetros").value);
+            var unidad = document.getElementById("unidad").value;
+            var resultado;
+
+            if (unidad === "pulgadas")
+			{
+                resultado = centimetros * 0.3937 + " pulgadas";
+            } else if (unidad === "pies") {
+                resultado = centimetros * 0.0328084 + " pies";
+            } else if (unidad === "yardas") {
+                resultado = centimetros * 0.0109361 + " yardas";
+            } else if (unidad === "millas") {
+                resultado = centimetros * 0.0000062137 + " millas";
+            } else {
+                resultado = "Unidad inválida";
+            }
+
+            document.getElementById("resultado").innerHTML = resultado;
+        }
+    </script>
+</head>
+<body>
+    <h1>Convertidor de Distancia</h1>
+    <label for="centimetros">Centímetros:</label>
+    <input type="number" id="centimetros" step="0.01">
+    <br>
+    <label for="unidad">Unidad de conversión:</label>
+    <select id="unidad">
+        <option value="pulgadas">Pulgadas</option>
+        <option value="pies">Pies</option>
+        <option value="yardas">Yardas</option>
+        <option value="millas">Millas</option>
+    </select>
+    <br>
+    <button onclick="convertir()">Convertir</button>
+    <br>
+    
+    <p id="resultado"></p>
+    <br>
+    <br>
+     Vergara Alarcon Roberto
+     <br>
+     Perez Perez Michelle
+     <br>
+     Cortez Juarez Edson Alberti
+     <br>
+     Solano Ortega Fernando
+</body>
+</html>

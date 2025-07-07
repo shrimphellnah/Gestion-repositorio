@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cálculo del área</title>
+  <script>
+    function calcularArea() {
+      var radio = parseFloat(document.getElementById('radio').value);
+      var area = Math.PI * Math.pow(radio, 2);
+      document.getElementById('resultado').innerHTML = 'El área del círculo es: ' + area.toFixed(4);
+    }
+  </script>
+</head>
+<body>
+  <h1>Cálculo del área circulo</h1>
+
+  <form>
+    <label for="radio">Radio:</label>
+    <input type="number" id="radio" name="radio" required>
+    <button type="button" onclick="calcularArea()">Calcular área</button>
+  </form>
+
+  <p id="resultado"></p>
+  <br>
+  <br>
+  <p id="integrantes">Cortes Juarez Edson Alberti</p>
+  <dv>
+  <p id="integrantes">Perez Perez Evelyn Mitchelle</p>
+  <dv>
+  <p id="integrantes">Solano Ortega Fernando</p>
+  <dv>
+  <p id="integrantes">Vergara Alarcon Roberto</p>
+  
+</body>
+</html>

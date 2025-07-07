@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bandera Panama</title>
+<script type="text/javascript">
+window.onload = function(){
+	
+	var lienzo = document.getElementById("Bandera2");
+	var contexto = lienzo.getContext('2d');
+	
+	contexto.fillStyle = "rgba(255, 255, 255, 1)";
+	contexto.fillRect(0, 0, 400, 200);
+
+	contexto.lineWidth = 110;
+	contexto.strokeStyle = "red";
+	contexto.beginPath();
+	contexto.moveTo(200, 50);
+	contexto.lineTo(400, 50);
+	contexto.stroke();
+	
+	
+	contexto.lineWidth = 120;
+	contexto.strokeStyle = "blue";
+	contexto.beginPath();
+	contexto.moveTo(0, 165);
+	contexto.lineTo(200, 165);
+	contexto.stroke();
+}
+</script>
+</head>
+<body>
+<h1>Bandera Panama</h1>
+<canvas id="Bandera2" width="400" height="200"></canvas>
+</body>
+</html>

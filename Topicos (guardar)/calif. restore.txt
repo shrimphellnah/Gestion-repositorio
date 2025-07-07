@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .graph-container {
+      position: relative;
+      width: 500px;
+      height: 500px;
+      background-color: lightgray;
+      margin-bottom: 20px;
+    }
+
+    .graph {
+      position: absolute;
+      bottom: 0;
+      width: 20%;
+      background-color: red;
+      transition: height 0.5s;
+    }
+
+    .graph1 {
+      left: 0;
+	  background-color: red;
+    }
+
+    .graph2 {
+      left: 30%;
+	  background-color: blue;
+    }
+	
+	.graph3 {
+		left: 60%;
+		background-color: green;
+	}
+
+    .measurement-line {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      border-top: 2px solid black;
+      text-align: center;
+    }
+  </style>
+  <script>
+    function mostrarGrafica() {
+      var calificacion1 = parseFloat(document.getElementById("calificacion1").value);
+      var calificacion2 = parseFloat(document.getElementById("calificacion2").value);
+	  var calificacion3 = parseFloat(document.getElementById("calificacion3").value);
+      if (calificacion1 > 10) {
+        calificacion1 = 10;
+      }
+      if (calificacion2 > 10) {
+        calificacion2 = 10;
+      }
+	  if (calificacion3 > 10) {
+		  calificacion3 = 10;
+	  }
+      var altura1 = calificacion1 * 50;
+      var altura2 = calificacion2 * 50;
+	  var altura3 = calificacion3 * 50;
+      document.getElementById("grafica1").style.height = altura1 + "px";
+      document.getElementById("grafica2").style.height = altura2 + "px";
+	  document.getElementById("grafica3").style.height = altura3 + "px";
+    }
+  </script>
+</head>
+<body>
+  <h1>Calificaciones de estudiantes de primaria</h1>
+  <div class="graph-container">
+    <div class="graph graph1" id="grafica1"></div>
+    <div class="graph graph2" id="grafica2"></div>
+    <div class="graph graph3" id="grafica3"></div>
+    <div class="measurement-line">
+      <span style="position: absolute; bottom: 5px;">0</span>
+      <span style="position: absolute; bottom: 250px;">5</span>
+      <span style="position: absolute; bottom: 500px;">10</span>
+    </div>
+  </div>
+  <label for="calificacion1">Calificación 1 (0-10):</label>
+  <input type="number" id="calificacion1" min="0" max="10" step="0.1" onchange="mostrarGrafica()">
+  <label for="calificacion2">Calificación 2 (0-10):</label>
+  <input type="number" id="calificacion2" min="0" max="10" step="0.1" onchange="mostrarGrafica()">
+  <label for="calificacion3">Calificación 3 (0-10):</label>
+  <input type="number" id="calificacion3" min="0" max="10" step="0.1" onchange="mostrarGrafica()">
+</body>
+</html>

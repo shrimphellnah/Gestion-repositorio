@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documentos Familiares</title>
+</head>
+
+<body>
+<p align="center">Datos Familiares</p>
+<p>&nbsp;</p>
+<form id="form1" name="form1" method="get">
+<input name="nom" type="hidden" value="Fernando" id="Name"/>
+<input name="pat" type="hidden" value="Solano" id="Lastname1"/>
+<input name="mat" type="hidden" value="Ortega" id="lastname2" />
+<input name="EP" type="hidden" value="Juarez" id="EP"/>
+<input name="PP" type="hidden" value="10" id="PP"/>
+<input name="MP" type="hidden" value="Xalapa" id="MP" />
+
+ 
+
+<table  align="center" width="330" border="1">
+  <tr>
+    <td width="170">Padre</td>
+    <td width="144"><label for="Padre"></label>
+    <input type="text" name="P" id="P" /></td>
+  </tr>
+  <tr>
+    <td>Madre</td>
+    <td><label for="Madre"></label>
+    <input type="text" name="M" id="M" /></td>
+  </tr>
+  <tr>
+    <td>Tutor</td>
+    <td><label for="Tutor"></label>
+    <input type="text" name="T" id="T" /></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td align="center">
+      <input type="submit" name="Paso3" id="Paso3" value="imprimir 3/3" />
+      <script type="text/javascript">
+        const urlSearchParams = new URLSearchParams(window.location.search);
+        
+        // Obtener los valores de los parámetros
+        const nom = urlSearchParams.get("nom");
+        const pat = urlSearchParams.get("pat");
+        const mat = urlSearchParams.get("mat");
+		
+		const EP = urlSearchParams.get("EP");
+        const PP = urlSearchParams.get("PP");
+        const MP = urlSearchParams.get("MP");
+        
+        const P = urlSearchParams.get("P");
+        const M = urlSearchParams.get("M");
+        const T = urlSearchParams.get("T");
+        
+        // Imprimir los datos con alert
+        alert("Nombre: " + nom);
+        alert("Apellido Paterno: " + pat);
+        alert("Apellido Materno: " + mat);
+		
+		alert("Escuela: " + EP);
+        alert("Promedio: " + PP);
+        alert("Municipio: " + MP);
+        
+        alert("Padre: " + P);
+        alert("Madre: " + M);
+        alert("Tutor: " + T);
+      </script>
+    </td>
+  </tr>
+</table>
+</form>
+
+Cortez Juarez Edson Alberti
+<br>
+Perez Perez Evelyn Michelle
+<br>
+Solano Ortega Fernando
+<br>
+Vergara Alarcon Roberto
+</body>
+</html>

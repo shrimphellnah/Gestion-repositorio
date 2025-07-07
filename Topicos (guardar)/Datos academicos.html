@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento acedemicos</title>
+
+ 
+
+</head>
+
+ 
+
+<body>
+<p align="center">Datos academicos</p>
+<p>&nbsp;</p>
+<form id="form1" name="form1" method="ge    t" action="Datos Familiares.html">
+<input name="nom" type="hidden" value="Fernando" id="Name"/>
+<input name="pat" type="hidden" value="Solano" id="Lastname1"/>
+<input name="mat" type="hidden" value="Ortega" id="lastname2" />
+
+ 
+
+<table  align="center" width="330" border="1">
+  <tr>
+    <td width="170">Escuela procedencia</td>
+    <td width="144"><label for="EP"></label>
+    <input type="text" name="EP" id="EP" /></td>
+  </tr>
+  <tr>
+    <td>Promedio Preparatoria</td>
+    <td><label for="PP"></label>
+    <input type="number" name="PP" id="PP" /></td>
+  </tr>
+  <tr>
+    <td>Municipio Preparatoria</td>
+    <td><label for="MP"></label>
+    <input type="text" name="MP" id="MP" /></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td align="center">
+      <input type="submit" name="Paso2" id="Paso2" value="SIguiente 2/3" />
+    </td>
+  </tr>
+</table>
+<script type="text/javascript">
+const urlSearchParams = new URLSearchParams(window.location.search);
+	console.log(urlSearchParams.get("Nom"));
+	console.log(urlSearchParams.get("Pat"));
+	console.log(urlSearchParams.get("Mat"));
+
+	console.log("itsx");
+</script>
+</form>
+<p>&nbsp;</p>
+
+Cortez Juarez Edson Alberti
+<br>
+Perez Perez Evelyn Michelle
+<br>
+Solano Ortega Fernando
+<br>
+Vergara Alarcon Roberto
+</body>
+</html>

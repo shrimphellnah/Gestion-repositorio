@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Ejercicio 1 - javascript</title>
+<script type ="text/javascript">
+ function Validar()
+ {  
+     var nombre=document.getElementById("nombre").value;
+     var Tnombre =document.getElementById("nom").innerHTML;
+      if (nombre.length ==0)
+      { 
+        alert (Tnombre);
+        document.getElementById("nombre").focus();
+        document.getElementById("aste").innerHTML = "Campo vacio"
+      }
+      else
+       alert ("Hola : "+nombre);
+ }
+</script>
+<link href="estilo2.css" rel="stylesheet"/>
+</head>
+<body>
+  <div id="contenedor">
+    <form id="form">
+      <table width="50%" border="1">
+        <tr>
+            <td><label for = "nom" name= "nom" id="nom"> nombre: </label>
+            </td>
+            <td><input type = "text" name = "nombre" id="nombre" 
+        onkeyup="javascript:this.value=this.value.toUpperCase();"><label for = "aste" name= "aste" id="aste" style="color:#F00"> </label></td>
+        </tr>
+        <tr>
+            <td>email</td>
+            <td><input type="email" name ="correo" id="correo" placeholder="nombre@itsx.edu.mx"></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td><input type = "button" value="Saludar" onClick="Validar()" ></td>
+        </tr>
+      </table>
+
+ 
+
+    </form>
+  </div>
+</body>
+</html>

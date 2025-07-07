@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Primer canvas</title>
+<script type="text/javascript">
+window.onload = function() {
+var lienzo=document.getElementById("micanvas");
+var contexto = lienzo.getContext('2d');
+
+contexto.lineWidth = 10
+contexto.strokeStyle = "green";
+contexto.moveTo(1, 1);
+contexto.lineTo(200, 200);
+contexto.moveTo(1, 200);
+contexto.lineTo(200, 1);
+
+contexto.stroke();
+
+}
+</script>
+</head>
+<body>
+<h1>Primer dibujo con canvas</h1>
+<canvas id="micanvas" width="200" height="200">
+  Si ves este texto es que tu navegador no admite canvas; por favor cambia a 
+  Firefox, Chrome, Safari, Opera ó IE9.
+</canvas>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bandera Inglaterra</title>
+<script type="text/javascript">
+window.onload = function(){
+	//Equipo:
+	//Cortes Juarez Edson Alberti
+	//Solano Ortega Roberto
+	//Evelyn Michelle Perez Perez
+	//Vergara Alarcon Roberto
+	
+	var lienzo = document.getElementById("Bandera2");
+	var contexto = lienzo.getContext('2d');
+	
+	contexto.fillStyle = "rgba(0, 0, 255, 1)";
+	contexto.fillRect(0, 0, 600, 300);
+
+	contexto.lineWidth = 60;
+	contexto.strokeStyle = "white";
+	contexto.beginPath();
+	contexto.moveTo(0, 300);
+	contexto.lineTo(600, 1);
+	contexto.moveTo(0, 1);
+	contexto.lineTo(600, 300);
+	contexto.stroke();
+	
+	contexto.lineWidth = 100;
+	contexto.strokeStyle = "white";
+	contexto.beginPath();
+	contexto.moveTo(0,150);
+	contexto.lineTo(600, 150);
+	contexto.moveTo(300, 350);
+	contexto.lineTo(300, 0);
+	contexto.stroke();
+
+	contexto.lineWidth = 30;
+	contexto.strokeStyle = "red";
+	contexto.beginPath();
+	contexto.moveTo(0, 135);
+	contexto.lineTo(600, 135);
+	contexto.moveTo(0, 165);
+	contexto.lineTo(600, 165);
+	contexto.moveTo(285, 0);
+	contexto.lineTo(285, 300);
+	contexto.moveTo(315, 0);
+	contexto.lineTo(315, 300);
+	contexto.moveTo(600, 0);
+	contexto.lineTo(0, 300);
+	contexto.moveTo(300, 150)
+	contexto.lineTo(600, 300);
+	contexto.stroke();
+}
+</script>
+</head>
+<body>
+<h1>Bandera Inglaterra</h1>
+<canvas id="Bandera2" width="600" height="300"></canvas>
+</body>
+</html>
+
